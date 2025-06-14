@@ -1,10 +1,9 @@
 [phases.setup]
 nixPkgs = [
-  "cmake",
+  "python310Full",
+  "curl",
   "gcc",
   "gnumake",
-  "python310Full",
-  "python310Packages.pip",
   "zlib",
   "libjpeg",
   "libpng",
@@ -13,6 +12,13 @@ nixPkgs = [
 
 [phases.install]
 cmds = [
+  # Faz o download do get-pip.py
+  "curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py",
+
+  # Instala o pip manualmente
+  "python3 get-pip.py",
+
+  # Atualiza pip e instala dependências
   "python3 -m pip install --upgrade pip",
   "python3 -m pip install -r requirements.txt"
 ]
