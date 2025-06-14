@@ -1,9 +1,12 @@
 [phases.setup]
 nixPkgs = [
-  "python310",
-  "python310Packages.pip",   # <- Adiciona pip corretamente
-  "gcc",
+  # Python completo, com pip/setuptools incluídos
+  "python310Full",
+
+  # Dependências de sistema para compilar dlib, etc.
   "cmake",
+  "gcc",
+  "gnumake",
   "zlib",
   "libjpeg",
   "libpng",
@@ -12,6 +15,7 @@ nixPkgs = [
 
 [phases.install]
 cmds = [
+  # já há pip no python310Full, então você pode chamar pip diretamente
   "pip install --upgrade pip",
   "pip install -r requirements.txt"
 ]
