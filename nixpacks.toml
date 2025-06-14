@@ -1,5 +1,15 @@
 [phases.setup]
-nixPkgs = ["cmake", "gcc", "gnumake", "python310Full", "zlib", "libjpeg", "libpng", "boost"]
+nixPkgs = [
+  "cmake",
+  "gcc",
+  "gnumake",
+  "python310Full",
+  "python310Packages.pip",
+  "zlib",
+  "libjpeg",
+  "libpng",
+  "boost"
+]
 
 [phases.install]
 cmds = [
