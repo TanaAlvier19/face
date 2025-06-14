@@ -1,0 +1,5 @@
+[phases.setup]
+nixPkgs = ["cmake", "gcc", "gnumake", "python310Full", "zlib", "libjpeg", "libpng", "boost"]
+
+[phases.install]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
