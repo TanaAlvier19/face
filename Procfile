@@ -1,1 +1,0 @@
-web: gunicorn recursos.wsgi:application

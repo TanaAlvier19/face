@@ -5,6 +5,9 @@ from corsheaders.defaults import default_headers
 from datetime import timedelta
 from cryptography.fernet import Fernet
 import os
+
+import dj_database_url
+from django.conf import ENVIRONMENT_VARIABLE
 FACIAL_ENCRYPTION_KEY = Fernet.generate_key()  # Guardar em variável de ambiente
 FACE_RECOGNITION_TOLERANCE = 0.4
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -110,6 +113,11 @@ DATABASES = {
         'PORT': '50013',
     }
 }
+default_db_url = "postgresql://postgres:eIMzVchFGxIpxDgXGbkyTKNiCjBpOgFw@maglev.proxy.rlwy.net:44436/railway"
+POSTGRES_LOCALLY=True
+if ENVIRONMENT_VARIABLE == 'production' or POSTGRES_LOCALLY==True:
+    DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL', default_db_url))
+    
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
