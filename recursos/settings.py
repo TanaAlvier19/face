@@ -103,19 +103,10 @@ WSGI_APPLICATION = 'recursos.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'byjpm3pwyopr6qevnu7e',
-        'USER': 'uoqrlwvb4xje9qiff1bs',
-        'PASSWORD': 'l611YyOVOYVJ8sbZM79DcF8h26wtGQ',
-        'HOST': 'byjpm3pwyopr6qevnu7e-postgresql.services.clever-cloud.com',
-        'PORT': '50013',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
-default_db_url = "postgresql://postgres:eIMzVchFGxIpxDgXGbkyTKNiCjBpOgFw@maglev.proxy.rlwy.net:44436/railway"
-POSTGRES_LOCALLY=True
-if ENVIRONMENT_VARIABLE == 'production' or POSTGRES_LOCALLY==True:
-    DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL', default_db_url))
     
 
 REST_FRAMEWORK = {
