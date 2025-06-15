@@ -61,6 +61,7 @@ EMAIL_HOST_PASSWORD = 'jxzz xpxs tdup nzuq'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 MIDDLEWARE = [
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -204,3 +205,5 @@ REST_AUTH={
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Para servir arquivos estáticos corretamente
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
