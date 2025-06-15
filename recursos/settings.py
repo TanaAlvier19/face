@@ -1,5 +1,3 @@
-
-
 from pathlib import Path
 from corsheaders.defaults import default_headers
 from datetime import timedelta
@@ -22,7 +20,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'secret_key')
 
 DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS = ['backend-django-2-7qpl.onrender.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'backend-django-2-7qpl.onrender.com',
+]
+
 
 SITE_NAME = "Test Django Next.js"
 
@@ -184,7 +187,6 @@ STATIC_URL = 'static/'
 CORS_ALLOW_ALL_ORIGINS = True
 SESSION_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SAMESITE    = 'None'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 SESSION_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']  # URL do frontend
