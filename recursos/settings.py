@@ -189,7 +189,7 @@ SESSION_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SAMESITE    = 'None'
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 SESSION_COOKIE_SECURE = True
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']  # URL do frontend
+CSRF_TRUSTED_ORIGINS = ['https://avd-ydux.onrender.com']  # URL do frontend
 REST_AUTH={
     'USE_JWT':True,
     'JWT_AUTH_COOKIE':'djangojwtauth_cookie',
