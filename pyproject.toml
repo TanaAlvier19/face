@@ -1,6 +1,0 @@
-[tool.poetry.scripts]
-start = "backend-django:main"  # Substitua pelo ponto de entrada do seu projeto
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
