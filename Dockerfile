@@ -1,5 +1,5 @@
 # Usa Python 3.10.11
-FROM python:3.10.11-slim-bookworm
+FROM python:3.10.11-slim-bullseye
 
 WORKDIR /app
 ENV PYTHONUNBUFFERED 1
