@@ -16,7 +16,11 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.generics import CreateAPIView, ListAPIView
-import face_recognition
+try:
+    import face_recognition
+    RECOGNITION_AVAILABLE = True
+except ImportError:
+    RECOGNITION_AVAILABLE = False
 import numpy as np
 from rest_framework.views import APIView
 import base64
