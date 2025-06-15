@@ -1,1 +1,0 @@
-web gunicon recursos.wsgi:apllication --log-file-

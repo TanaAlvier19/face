@@ -18,9 +18,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-SECRET_KEY = 'django-insecure-drd4vkd5pbo3twcsvuhfj6no+-$xl3u*1zi-w@e=xrp4g(5uq*'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'secret_key')
 
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', True)
 
 ALLOWED_HOSTS = ['*']
 
@@ -204,6 +204,6 @@ REST_AUTH={
 }
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = "staticfiles"
 # Para servir arquivos estáticos corretamente
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
