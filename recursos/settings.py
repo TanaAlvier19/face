@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'secret_key')
 
 DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['backend-django-2-7qpl.onrender.com']
 
 SITE_NAME = "Test Django Next.js"
 
