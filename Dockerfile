@@ -28,8 +28,6 @@ RUN pip install -r requirements.txt
 COPY . /app/
 
 # Coleta arquivos estáticos e aplica migrações
-RUN python manage.py collectstatic --noinput
-RUN python manage.py migrate
 
 # Expõe a porta usada pelo Gunicorn (Render espera 8000)
 EXPOSE 8000
