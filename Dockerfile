@@ -1,5 +1,5 @@
 # Usa Python 3.10.11 baseado no Debian Bullseye (leve)
-FROM python:3.10.11-slim-bullseye
+FROM python:3.10.11
 
 # Define o diretório principal do projeto
 WORKDIR /app
