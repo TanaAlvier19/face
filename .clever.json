@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "app_id": "app_5652b1bc-2109-4128-bc1f-d72ce118676c",
+      "org_id": "user_d5692c8e-6e7c-4ed5-85e0-631f0b7c1d39",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_5652b1bc-2109-4128-bc1f-d72ce118676c.git",
+      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_5652b1bc-2109-4128-bc1f-d72ce118676c.git",
+      "name": "avd-backend",
+      "alias": "avd-backend"
+    },
+    {
+      "app_id": "app_77d47f9d-347b-42c7-93da-08b96ec35f7e",
+      "org_id": "user_d5692c8e-6e7c-4ed5-85e0-631f0b7c1d39",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_77d47f9d-347b-42c7-93da-08b96ec35f7e.git",
+      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_77d47f9d-347b-42c7-93da-08b96ec35f7e.git",
+      "name": "avd-bac",
+      "alias": "avd-bac"
+    }
+  ]
+}
