@@ -105,13 +105,17 @@ WSGI_APPLICATION = 'recursos.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True  # ou sslmode='require' dependendo do provedor
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blsmjowazuya2forrzyu',
+        'USER': 'ueheb7pxtnlwy32ai23z',
+        'PASSWORD': 'BuxBtWEBaZmyLyedfd5KPhxXKUZ7EG',
+        'HOST': 'blsmjowazuya2forrzyu-postgresql.services.clever-cloud.com',
+        'PORT': '50013',
+
+    }
 }
- 
+    
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
