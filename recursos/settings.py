@@ -111,12 +111,8 @@ DATABASES = {
         'USER': 'ueheb7pxtnlwy32ai23z',
         'PASSWORD': 'BuxBtWEBaZmyLyedfd5KPhxXKUZ7EG',
         'HOST': 'blsmjowazuya2forrzyu-postgresql.services.clever-cloud.com',
-        'PORT': '50013',
-
-    }
+        'PORT': '50013',}
 }
-    
-
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
